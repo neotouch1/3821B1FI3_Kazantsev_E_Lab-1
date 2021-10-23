@@ -44,4 +44,5 @@ while (N <= 0)
     printf("SUM: %f\n\n", sum); // Вывод результата на экран.
 
     return 0;
+    
 }
