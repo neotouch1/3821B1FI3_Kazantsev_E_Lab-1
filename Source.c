@@ -16,16 +16,6 @@ int main(void)
     printf("Input max: ");  // Выводит на экран предложение ввести значение для "max"
     scanf("%lf", &max);
     
-     while (min > N || max > N) // Цикл необходим для контроля вводимых значений.
-    {
-        printf("Please enter a different value N:");
-        scanf("%d", &N);
-        printf("Input min: ");
-        scanf("%lf", &min);
-        printf("Input max: ");
-        scanf("%lf", &max);
-    }
-
     if (min > max) // В слуае, если вводимое значение "min" окажется больше чем "max", делается перестановка.
     {
         temp = min;
