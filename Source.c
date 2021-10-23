@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    int N, i;  // Переменные генерации и индекса.
+    int N, i, temp;  // Переменные генерации и индекса, временная переменная.
     double a, fractional_part, max, min; // Переменная генерации, дробная переменная, переменные верхней и нижней границ диапазона.
     double num, sum = 0; // Переменная целой и переменная суммы.
 
@@ -15,6 +15,23 @@ int main(void)
     scanf("%lf", &min);
     printf("Input max: ");  // Выводит на экран предложение ввести значение для "max"
     scanf("%lf", &max);
+    
+     while (min > N || max > N) // Цикл необходим для контроля вводимых значений.
+    {
+        printf("Please enter a different value N:");
+        scanf("%d", &N);
+        printf("Input min: ");
+        scanf("%lf", &min);
+        printf("Input max: ");
+        scanf("%lf", &max);
+    }
+
+    if (min > max) // В слуае, если вводимое значение "min" окажется больше чем "max", делается перестановка.
+    {
+        temp = min;
+        min = max;
+        max = temp;
+    }
 
     for (i = 0; i < N; i++)
     {
