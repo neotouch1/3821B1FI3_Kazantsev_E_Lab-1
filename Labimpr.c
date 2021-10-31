@@ -13,12 +13,12 @@ int main()
 
     do
     {
-        printf("Input N: "); // Выводит на экран предложение ввести значение для N
-        scanf_s("%d", &N);
-        printf("Input min: ");  // Выводит на экран предложение ввести значение для "min"
-        scanf_s("%lf", &min);
-        printf("Input max: ");  // Выводит на экран предложение ввести значение для "max"
-        scanf_s("%lf", &max);
+        printf("Input N: "); 
+        scanf("%d", &N);
+        printf("Input min: ");  
+        scanf("%lf", &min);
+        printf("Input max: ");  
+        scanf("%lf", &max);
     }
 
     while (min > max || N <= 0);
